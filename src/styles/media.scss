@@ -1,0 +1,144 @@
+@media (max-width: 1200px) {
+  label.navigation-box--logo {
+    margin-left: 30px;
+  }
+
+  ul.navigation-box--list {
+    margin-right: 30px;
+  }
+
+  div.footer-box {
+    margin: 0 30px;
+  }
+}
+
+@media (max-width: 889px) {
+  nav.navigation {
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+    overflow: auto;
+  }
+  div.burger {
+    display: block;
+    margin-right: 20px;
+  }
+  label.navigation-box--logo {
+    display: block;
+  }
+  ul.navigation-box--list {
+    position: fixed;
+    width: 100%;
+    top: 90px;
+    left: -100%;
+    transition: all 0.8s;
+    text-align: center;
+    background-color: #fff;
+    height: calc(100vh - 90px);
+    overflow: auto;
+  }
+
+  ul.show {
+    left: 0;
+  }
+
+  li.navigation-box--list__item {
+    display: block;
+    margin: 40px 20px;
+    line-height: 30px;
+  }
+
+  a.nav-link {
+    font-size: 28px;
+    font-weight: 600;
+  }
+
+  footer.footer {
+    height: 150px;
+    line-height: 0.5;
+  }
+
+  div.footer-box--row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  div.footer-box--media {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 20%;
+  }
+
+  div.footer-box--media__logo {
+    p {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 639px) {
+  div.landing-area--text {
+    margin: 0 30px;
+    h2 {
+      font-size: 25px;
+    }
+
+    p,
+    li {
+      font-size: 16px;
+    }
+  }
+
+  a.nav-link {
+    font-size: 22px;
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 400px) {
+  li.navigation-box--list__item {
+    display: block;
+    margin: 20px 20px;
+    line-height: 30px;
+  }
+
+  a.nav-link {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 300px) {
+  div.landing-area--text {
+    margin: 0 30px;
+    h2 {
+      font-size: 20px;
+    }
+
+    p,
+    li {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 475px) {
+  div.footer-box--row {
+    font-size: 13px;
+    line-height: 2;
+  }
+}
+
+@media (max-height: 600px) {
+  div.footer-box--row {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 350px) {
+  div.footer-box--row {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+}

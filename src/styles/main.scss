@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600;700&display=swap");
+@import "media.scss";
+
+// === Common ===
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: none;
+  list-style: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  font-family: "Source Serif Pro", serif;
+}
+
+.container {
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.burger {
+  float: right;
+  display: none;
+  width: 60px;
+  height: 40px;
+  cursor: pointer;
+
+  &-tick {
+    width: 30px;
+    height: 3px;
+    background-color: #ffc200;
+    margin: 10px;
+    transition: 0.5s;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+.burger.open {
+  div:nth-child(1) {
+    transform: rotateZ(45deg);
+    transform-origin: left;
+  }
+
+  div:nth-child(3) {
+    transform: rotateZ(-45deg);
+    transform-origin: left;
+  }
+
+  div:nth-child(2) {
+    transform: translateX(-100%);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+// === / Common ===
+
+// === Mixin ===
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+// === / Mixin ===
+
+// === Variables ===
+$fw-regular: 400;
+$fw-semibold: 600;
+$fw-bold: 700;
+
+$cl-red: #a31f1f;
+$cl-white: #f5f5f5;
+$cl-yellow: #ffc200;
+$cl-dark: #141414;
+
+// === / Variables ===
+
+// === Navigation ===
+
+.navigation {
+  padding-top: 28px;
+  width: 100%;
+  height: 90px;
+
+  &-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &--list {
+      &__item {
+        display: inline-block;
+        margin-left: 35px;
+
+        &:last-child {
+          border: 1px solid $cl-yellow;
+          border-radius: 50%;
+          padding: 15px 10px;
+        }
+      }
+    }
+  }
+}
+
+.nav-link {
+  text-decoration: none;
+  font-weight: $fw-regular;
+  font-size: 15px;
+  color: $cl-dark;
+}
+
+// === / Navigation ===
+
+// === footer ===
+
+.footer {
+  width: 100%;
+  height: 90px;
+  background-color: $cl-red;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+}
+
+.footer-box {
+  margin-top: 10px !important;
+  font-size: 15px;
+  line-height: 2;
+
+  display: flex;
+  justify-content: space-between;
+  &--row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%;
+    &__info,
+    &__contact {
+      text-align: center;
+    }
+  }
+
+  &--media {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+    text-align: center;
+    &__images {
+      img {
+        margin-right: 10px;
+        cursor: pointer;
+      }
+    }
+    &__logo {
+      p {
+        line-height: 1;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+// === / footer ===
+
+// === Landing ===
+
+.landing {
+  padding-top: 118px;
+  height: calc(100vh - 90px);
+  background-image: url("../images/bg-first.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  font-weight: $fw-semibold;
+  color: #fff;
+  font-size: 20px;
+
+  &-area {
+    max-width: 665px;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+  }
+
+  h2 {
+    color: $cl-yellow;
+    font-size: 30px;
+
+    margin-bottom: 50px;
+  }
+
+  p {
+    max-width: 520px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+
+  li {
+    line-height: 1.5;
+  }
+}
+
+// === / Landing ===
