@@ -1,9 +1,11 @@
 import React from 'react'
 
+
 import insta from '../images/instagram.png'
 import massenger from '../images/messenger.png'
 import facebook from '../images/facebook.png'
 import minilogo from '../images/mini-logo.png'
+
 
 export const Footer = () => {
     return (

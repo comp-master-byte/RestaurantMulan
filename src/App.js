@@ -4,6 +4,7 @@ import './styles/main.scss'
 import Navigation from './components/Navigation';
 import Landing from './pages/Landing';
 import { Menu } from './pages/Menu';
+import { Stock } from './pages/Stock';
 
 import {
   BrowserRouter as Router,
@@ -29,6 +30,7 @@ function App() {
       <Switch>
         <Route path='/about' component={Landing}/>
         <Route path='/menu' component={Menu}/>
+        <Route path='/action' component={Stock}/>
         <Redirect to='/about'/>
       </Switch>
       <Footer/>

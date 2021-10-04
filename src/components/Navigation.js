@@ -2,18 +2,24 @@ import React, {useState} from 'react'
 import { motion } from 'framer-motion'
 import {Link} from 'react-router-dom'
 
+
 import logo from '../images/logo.png'
+import Links from './Links'
+
+const links = [
+    {name: 'О нас', url:'/'},
+    {name: 'Меню', url:'/menu'},
+    {name: 'Акции', url:'/action'},
+    {name: 'Филиалы', url:'/filials'},
+    {name: 'Контакты', url:'/contacts'},
+    {name: 'Забронировать столик', url:'/booking'},
+]
 
 const Navigation = () => {
 
     const toggleClass = () => {
         document.querySelector('.burger').classList.toggle('open')
         document.querySelector('.navigation-box--list').classList.toggle('show')
-    }
-    
-    const removeShow = () => {
-        document.querySelector('.burger').classList.remove('open')
-        document.querySelector('.navigation-box--list').classList.remove('show')
     }
 
     return (
@@ -26,43 +32,9 @@ const Navigation = () => {
                     <div className="burger-tick"></div>
                 </div>
                 <ul className="navigation-box--list">
-                    <motion.li 
-                        onClick={removeShow}
-                        whileHover={{scale: 1.1, color: 'red'}}
-                        whileTap={{scale: 0.95}}
-                        transition={{duration:0.3}}
-                    className="navigation-box--list__item"><Link className="nav-link" to="/about">О нас</Link></motion.li>
-                    <motion.li 
-                    onClick={removeShow}
-                        whileHover={{scale: 1.1}}
-                        whileTap={{scale: 0.95}}
-                        transition={{duration:0.3}}
-                    className="navigation-box--list__item"><Link className="nav-link" to="/menu">Меню</Link></motion.li>
-                    <motion.li 
-                    onClick={removeShow}
-                        whileHover={{scale: 1.1}}
-                        whileTap={{scale: 0.95}}
-                        transition={{duration:0.3}}
-                    className="navigation-box--list__item"><Link className="nav-link" to="/action">Акции</Link></motion.li>
-                    <motion.li 
-                    onClick={removeShow}
-                        whileHover={{scale: 1.1}}
-                        whileTap={{scale: 0.95}}
-                        transition={{duration:0.3}}
-                    className="navigation-box--list__item"><Link className="nav-link" to="/filialsa">Филиалы</Link></motion.li>
-                    <motion.li 
-                    
-                    onClick={removeShow}
-                        whileHover={{scale: 1.1}}
-                        whileTap={{scale: 0.95}}
-                        transition={{duration:0.3}}
-                    className="navigation-box--list__item"><Link className="nav-link" to="/contacts">Контакты</Link></motion.li>
-                    <motion.li 
-                    onClick={removeShow}
-                        whileHover={{scale: 1.1}}
-                        whileTap={{scale: 0.95}}
-                        transition={{duration:0.3}}
-                        className="navigation-box--list__item"><Link className="nav-link" to="/booking">Забронировать столик</Link></motion.li>
+                    {links.map((stata, index) => {
+                        return <Links data={stata} key={index}/>
+                    })}
                 </ul>
    
             </div>

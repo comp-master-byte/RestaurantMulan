@@ -12,7 +12,16 @@
   }
 }
 
-@media (max-width: 889px) {
+@media (max-width: 901px) {
+  div.landing-area--text {
+    padding-top: 90px;
+  }
+
+  div.menu {
+    padding: 90px 20px;
+    z-index: 1;
+  }
+
   nav.navigation {
     position: fixed;
     top: 0;
