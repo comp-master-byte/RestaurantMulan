@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { MenuSlider } from '../components/MenuSlider'
+
 import Slider from 'react-slick'
-import { motion } from 'framer-motion'
 
 import bg1 from '../images/mini-bg-1.png'
 import bg2 from '../images/mini-bg-2.png'
@@ -79,15 +79,19 @@ export const Menu = () => {
         <div className="menu">
             <div className="container">
                 <div className="menu-box">
-                    <Slider {...settings}>
+                    <Slider {...settings} >
                         {slider.map((stata, index) => {
-                            return <MenuSlider data={stata} key={index}/>
+                            return <MenuSlider 
+                            
+                                        data={stata} 
+                                        key={index}
+                                    />
                         })}
                         {slider.map((stata, index) => {
                             return <MenuSlider data={stata} key={index}/>
                         })}
                     </Slider>    
-                </div>                
+                </div>           
             </div>
         </div>
     )

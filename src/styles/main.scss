@@ -84,6 +84,49 @@ $cl-dark: #141414;
 
 // === / Variables ===
 
+// === Popup ===
+.modal {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  @include center();
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.modal.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal-content {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  width: 50vw;
+  position: relative;
+  li {
+    font-size: 20px;
+    font-weight: $fw-regular;
+    padding: 10px;
+    &:before {
+      content: "";
+      display: flex;
+      margin-bottom: 5px;
+      margin-right: 10px;
+      display: inline-block;
+      width: 10px;
+      height: 1px;
+      background-color: #000;
+    }
+  }
+}
+// === / Popup ===
+
 // === Navigation ===
 
 .navigation {
@@ -228,9 +271,9 @@ $cl-dark: #141414;
       @include center();
       flex-direction: column;
       position: relative;
-      flex-basis: 24%;
+      flex-basis: 0%;
       height: 414px;
-      width: 98%;
+      width: 100%;
 
       img {
         position: absolute;
@@ -238,6 +281,7 @@ $cl-dark: #141414;
         left: 0;
         height: 100%;
         width: 100%;
+        padding: 10px;
       }
 
       h2 {
@@ -257,11 +301,104 @@ $cl-dark: #141414;
     }
   }
 }
-
-.bg-img-1 {
-  background-image: url("../images/mini-bg-1.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
 // === / Menu ===
+
+// === Stock ===
+.stock {
+  padding-top: 75px;
+  height: calc(100vh - 90px);
+  background-color: $cl-white;
+}
+
+.stock-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  &--text {
+    max-width: 45%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 40px;
+
+    h2 {
+      color: $cl-red;
+      font-weight: $fw-bold;
+      font-size: 26px;
+    }
+
+    p {
+      color: $cl-dark;
+      font-size: 16px;
+      max-width: 360px;
+      margin: 0 auto;
+      margin-top: 20px;
+      font-weight: $fw-regular;
+      line-height: 1.7;
+    }
+
+    button {
+      font-weight: $fw-bold;
+      font-size: 20px;
+      color: $cl-dark;
+      background-color: transparent;
+      padding: 20px;
+      border-radius: 50%;
+      border: 1px solid $cl-yellow;
+      margin-top: 90px;
+      cursor: pointer;
+    }
+  }
+
+  &--image {
+    position: relative;
+    .box-border {
+      position: absolute;
+      top: 5%;
+      left: -5%;
+      height: 423px;
+      width: 410px;
+      background-color: transparent;
+      border: 1px solid $cl-yellow;
+    }
+  }
+}
+
+.extrainfo {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+  @include center();
+  opacity: 0;
+  pointer-events: none;
+  overflow: auto;
+
+  &-content {
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #fff;
+    width: 70vw;
+    li {
+      font-size: 18px;
+      font-weight: $fw-regular;
+      margin-top: 15px;
+      position: relative;
+
+      &:before {
+        content: "-";
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+.extrainfo.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+// === / Stock ===

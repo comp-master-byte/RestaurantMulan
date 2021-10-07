@@ -12,7 +12,53 @@
   }
 }
 
+div.stock-box {
+  margin: 0 20px;
+}
+
 @media (max-width: 901px) {
+  div.stock {
+    height: calc(100vh - 90px);
+    line-height: 1;
+  }
+  div.stock-box {
+    padding-top: 90px;
+    width: 100%;
+    margin: 0 auto;
+
+    &--image {
+      display: none;
+    }
+
+    &--text {
+      max-width: 100%;
+      margin: 0 auto;
+      h2 {
+        font-size: 20px;
+      }
+
+      p {
+        font-size: 15px;
+      }
+      button {
+        margin-top: 20px;
+        font-size: 15px;
+      }
+    }
+  }
+
+  div.extrainfo-content {
+    overflow: auto;
+    margin-bottom: 10px;
+    h1 {
+      font-size: 20px;
+    }
+
+    li {
+      font-size: 14px;
+    }
+  }
+
   div.landing-area--text {
     padding-top: 90px;
   }
