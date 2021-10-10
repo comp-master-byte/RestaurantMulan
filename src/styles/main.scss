@@ -61,6 +61,17 @@ body {
   }
 }
 
+.btn {
+  width: 389.13px;
+  height: 53.41px;
+  color: #141414;
+  font-weight: 700;
+  background-color: #ffc200;
+  text-align: center;
+  font-size: 20.35px;
+  margin-top: 38px;
+}
+
 // === / Common ===
 
 // === Mixin ===
@@ -402,3 +413,270 @@ $cl-dark: #141414;
 }
 
 // === / Stock ===
+
+// === Contacts ===
+
+.contact {
+  padding-top: 28px;
+  height: calc(100vh - 90px);
+  background-color: $cl-white;
+
+  &-box {
+    display: flex;
+
+    &--image {
+      position: relative;
+
+      .line {
+        width: 507px;
+        height: 500px;
+        background-color: transparent;
+        border: 1px solid $cl-yellow;
+
+        position: absolute;
+        top: 5%;
+        left: -5%;
+      }
+
+      .enter {
+        position: absolute;
+        top: 25%;
+        left: 15%;
+        border-radius: 50%;
+      }
+
+      .location {
+        position: absolute;
+        top: 40%;
+        left: 35%;
+      }
+    }
+
+    &--accordion {
+      flex-basis: 60%;
+      .accordion {
+        text-align: center;
+        max-width: 350px;
+        line-height: 1.1;
+
+        span {
+          cursor: pointer;
+          color: $cl-red;
+          font-weight: $fw-bold;
+        }
+      }
+
+      .accordion-information {
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+        transition: all 600ms ease-in-out;
+      }
+
+      .accordion-information.show {
+        height: 250px;
+        opacity: 1;
+      }
+      .accordion-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-top: 20px;
+      }
+      h2 {
+        color: $cl-red;
+        font-weight: $fw-bold;
+        font-size: 25px;
+      }
+      h3 {
+        color: $cl-dark;
+        font-weight: $fw-bold;
+        font-size: 20px;
+        margin-top: 20px;
+      }
+      p {
+        color: $cl-dark;
+        font-weight: $fw-regular;
+        font-size: 17px;
+        margin-top: 15px;
+      }
+    }
+  }
+}
+
+// .contact {
+//   &-box {
+//     display: grid;
+//     grid-template-columns: repeat(2, 1fr);
+//     &--accord {
+//       position: relative;
+//       span {
+//         position: absolute;
+//         right: -20%;
+//         top: 50%;
+//       }
+//     }
+
+//     &--text {
+//       text-align: center;
+//       line-height: 1.6;
+//       display: flex;
+//       flex-direction: column;
+//       align-items: center;
+//     }
+//
+//   }
+// }
+
+// === / Contacts ===
+
+// === Filials ===
+.filials {
+  padding-top: 48px;
+  height: calc(100vh - 90px);
+  background-color: $cl-white;
+
+  &-text {
+    h2 {
+      color: $cl-red;
+      font-weight: $fw-bold;
+      font-size: 30px;
+    }
+
+    &--flex {
+      line-height: 2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      p {
+        font-weight: $fw-regular;
+        font-size: 20px;
+        color: $cl-dark;
+      }
+
+      button {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        color: $cl-yellow;
+        font-size: 16px;
+        font-weight: $fw-semibold;
+      }
+    }
+  }
+}
+.grid-container {
+  margin-top: 20px;
+  position: relative;
+}
+
+.grid1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.grid2 {
+  position: absolute;
+  top: 0;
+  left: 36%;
+}
+
+.grid5 {
+  position: absolute;
+  top: 0;
+  left: 63%;
+}
+
+.grid4 {
+  position: absolute;
+  top: 60%;
+  left: 63%;
+}
+
+.grid3 {
+  position: absolute;
+  bottom: -183%;
+  left: 10%;
+}
+
+//  === / Filials ===
+
+// === Booking ===
+.line-border {
+  position: absolute;
+  width: 436px;
+  height: 401px;
+  background-color: transparent;
+  border: 1px solid $cl-yellow;
+  bottom: 7%;
+  left: 2%;
+}
+
+.booking {
+  padding-top: 100px;
+  background-color: $cl-white;
+  height: calc(100vh - 90px);
+
+  &-box {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    &--registration {
+      flex-basis: 60%;
+      text-align: center;
+
+      h2 {
+        max-width: 80%;
+        margin: 0 auto;
+        font-size: 26px;
+        color: $cl-dark;
+        font-weight: $fw-bold;
+      }
+
+      &__input {
+        .inputReg {
+          display: block;
+          width: 388px;
+          margin: 0 auto;
+          height: 41px;
+          border: 1px solid $cl-dark;
+          outline: none;
+          background: transparent;
+          color: #c4c4c4;
+          padding: 16px 0 14px 10px;
+          margin-top: 25px;
+          border-radius: none;
+          font-size: 17px;
+          font-weight: $fw-regular;
+          text-transform: capitalize;
+        }
+      }
+
+      &__time {
+        display: flex;
+        justify-content: space-between;
+        max-width: 388px;
+        margin: 0 auto;
+
+        .period {
+          margin-top: 25px;
+          width: 175px;
+          height: 43px;
+          padding: 0px 10px;
+          border-radius: none;
+          font-size: 17px;
+          font-weight: $fw-regular;
+          text-transform: capitalize;
+          outline: none;
+          background: transparent;
+          color: #c4c4c4;
+          border: 1px solid $cl-dark;
+        }
+      }
+    }
+  }
+}
+
+// === / Booking ===

@@ -17,6 +17,38 @@ div.stock-box {
 }
 
 @media (max-width: 901px) {
+  div.booking-box--image {
+    display: none;
+  }
+
+  div.booking-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+      font-size: 22px;
+    }
+  }
+  div.contact-box--accordion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  div.contact {
+    padding-top: 120px;
+  }
+
+  div.contact-box {
+    display: block;
+  }
+
+  div.contact-box--image {
+    display: none;
+  }
+
   div.stock {
     height: calc(100vh - 90px);
     line-height: 1;
@@ -151,7 +183,47 @@ div.stock-box {
   }
 }
 
+@media (max-width: 544px) {
+  button.btn {
+    width: 200px;
+    height: 40px;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  div.booking-box--registration__input {
+    margin-top: 20px;
+    .inputReg {
+      line-height: 2;
+      max-width: 200px;
+      margin: 10px auto 0 auto;
+    }
+  }
+
+  div.booking-box--registration__time {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .period {
+      max-width: 200px;
+      margin: 10px auto 0 auto;
+    }
+  }
+}
+
 @media (max-width: 400px) {
+  div.contact-box--accordion {
+    h2 {
+      font-size: 20px;
+    }
+
+    h3 {
+      font-size: 17px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
   li.navigation-box--list__item {
     display: block;
     margin: 20px 20px;
