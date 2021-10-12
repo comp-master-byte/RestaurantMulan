@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { MenuSlider } from '../components/MenuSlider'
+import { motion } from 'framer-motion'
 
 import Slider from 'react-slick'
 
@@ -78,7 +79,11 @@ export const Menu = () => {
     return (
         <div className="menu">
             <div className="container">
-                <div className="menu-box">
+                <motion.div 
+                  initial={{opacity:0, y: 100}}
+                  animate={{opacity:1,y: 0, transition: {duration: 1.5}}}
+                
+                className="menu-box">
                     <Slider {...settings} >
                         {slider.map((stata, index) => {
                             return <MenuSlider 
@@ -91,7 +96,7 @@ export const Menu = () => {
                             return <MenuSlider data={stata} key={index}/>
                         })}
                     </Slider>    
-                </div>           
+                </motion.div>           
             </div>
         </div>
     )

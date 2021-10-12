@@ -10,7 +10,7 @@ const links = [
     {name: 'О нас', url:'/'},
     {name: 'Меню', url:'/menu'},
     {name: 'Акции', url:'/action'},
-    {name: 'Филиалы', url:'/filials'},
+    // {name: 'Филиалы', url:'/filials'},
     {name: 'Контакты', url:'/contacts'},
     {name: 'Забронировать столик', url:'/booking'},
 ]
